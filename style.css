@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #6DD5FA, #FF758C);
+    color: #333;
+}
+
+#todo-app {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+.todo-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-input {
+    width: calc(100% - 50px);
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.plus-icon {
+    font-size: 24px;
+    color: #28a745;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.plus-icon:hover {
+    color: #218838;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#task-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#task-list li.done {
+    text-decoration: line-through;
+    color: #666;
+}
+
+#task-list li.done::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    background-color: #6DD5FA;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.loading {
+    border: 5px solid #ccc;
+    border-top-color: #6DD5FA;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
